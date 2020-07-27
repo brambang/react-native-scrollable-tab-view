@@ -12,8 +12,8 @@ const {
   Dimensions,
 } = ReactNative;
 const Button = require('./Button');
-// import * as Icon from '@expo/vector-icons';
-// import { ActionSheet, Button as ButtonNb, Content } from 'native-base';
+import * as Icon from '@expo/vector-icons';
+import { ActionSheet, Button as ButtonNb, Content } from 'native-base';
 import Colors from '../../constants/Colors';
 
 const WINDOW_WIDTH = Dimensions.get('window').width;
@@ -157,10 +157,10 @@ const ScrollableTabBar = createReactClass({
 
   render() {
     // MY CUSTOMIZE ACTION SHEET BUTTON DI KIRI
-    // let BUTTONS = [];
-    // this.props.tabs.map((name, page) => {
-    //   BUTTONS.push(name)
-    // });
+    let BUTTONS = [];
+    this.props.tabs.map((name, page) => {
+      BUTTONS.push(name)
+    });
     // MY CUSTOMIZE ACTION SHEET BUTTON DI KIRI
 
     const tabUnderlineStyle = {
@@ -179,6 +179,26 @@ const ScrollableTabBar = createReactClass({
       style={[styles.container, {backgroundColor: this.props.backgroundColor, }, this.props.style, ]}
       onLayout={this.onContainerLayout}
     >
+
+      <Content style={styles.ASContent} contentContainerStyle={styles.ASContainer}>
+        <ButtonNb
+          style={styles.ASButton}
+          onPress={() =>
+            ActionSheet.show(
+              {
+                options: BUTTONS,
+                title: "Kategori Produk"
+              },
+              buttonIndex => {
+                const index = BUTTONS.indexOf(BUTTONS[buttonIndex]);
+                this.props.goToPage(index);
+              }
+            )
+          }
+        >
+          <Icon.Ionicons name="ios-list" size={24} color={Colors.corporateColorRed} />
+        </ButtonNb>
+      </Content>
 
       <ScrollView
         ref={(scrollView) => { this._scrollView = scrollView; }}
@@ -224,7 +244,7 @@ const ScrollableTabBar = createReactClass({
   },
 
   onContainerLayout(e) {
-    // e.nativeEvent.layout.width = e.nativeEvent.layout.width - 100; // CUSTOMIZE STYLE UNTUK ACTION SHEET DI KIRI
+    e.nativeEvent.layout.width = e.nativeEvent.layout.width - 100; // CUSTOMIZE STYLE UNTUK ACTION SHEET DI KIRI
     this._containerMeasurements = e.nativeEvent.layout;
     this.updateView({value: this.props.scrollValue.__getValue(), });
   },
@@ -247,7 +267,7 @@ const styles = StyleSheet.create({
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderColor: '#ccc',
-    // paddingLeft: 50, // CUSTOMIZE STYLE UNTUK ACTION SHEET DI KIRI
+    paddingLeft: 50, // CUSTOMIZE STYLE UNTUK ACTION SHEET DI KIRI
   },
   tabs: {
     flexDirection: 'row',

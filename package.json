@@ -1,30 +1,30 @@
 {
   "_args": [
     [
-      "github:brambang/react-native-scrollable-tab-view-bb#master",
-      "/home/kokkuan/Documents/AMRI/projects/react-native/burgerbrambang.apps/react-apps-burgerbrambang-dev"
+      "github:brambang/react-native-scrollable-tab-view#master",
+      "/home/kokkuan/Documents/AMRI/projects/react-native/brambang.apps/expo-rn"
     ]
   ],
-  "_from": "github:brambang/react-native-scrollable-tab-view-bb#master",
-  "_id": "react-native-scrollable-tab-view@github:brambang/react-native-scrollable-tab-view-bb#503e0f0d87393f6dc3a586548f6963b9e0e77fe8",
+  "_from": "github:brambang/react-native-scrollable-tab-view#master",
+  "_id": "react-native-scrollable-tab-view@github:brambang/react-native-scrollable-tab-view#38b5b550a1af7cd111aae87f46ead8b5a265fb83",
   "_inBundle": false,
   "_integrity": "",
   "_location": "/react-native-scrollable-tab-view",
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "github:brambang/react-native-scrollable-tab-view-bb#master",
-    "rawSpec": "github:brambang/react-native-scrollable-tab-view-bb#master",
-    "saveSpec": "github:brambang/react-native-scrollable-tab-view-bb#master",
+    "raw": "github:brambang/react-native-scrollable-tab-view#master",
+    "rawSpec": "github:brambang/react-native-scrollable-tab-view#master",
+    "saveSpec": "github:brambang/react-native-scrollable-tab-view#master",
     "fetchSpec": null,
     "gitCommittish": "master"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "github:brambang/react-native-scrollable-tab-view-bb#503e0f0d87393f6dc3a586548f6963b9e0e77fe8",
-  "_spec": "github:brambang/react-native-scrollable-tab-view-bb#master",
-  "_where": "/home/kokkuan/Documents/AMRI/projects/react-native/burgerbrambang.apps/react-apps-burgerbrambang-dev",
+  "_resolved": "github:brambang/react-native-scrollable-tab-view#38b5b550a1af7cd111aae87f46ead8b5a265fb83",
+  "_spec": "github:brambang/react-native-scrollable-tab-view#master",
+  "_where": "/home/kokkuan/Documents/AMRI/projects/react-native/brambang.apps/expo-rn",
   "author": {
     "name": "Brent Vatne"
   },
